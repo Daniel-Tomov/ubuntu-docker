@@ -13,6 +13,7 @@ RUN cp /usr/bin/bash /usr/bin/zsh
 RUN mkdir /home/user
 RUN useradd --home /home/user --shell /usr/bin/zsh user
 RUN usermod -aG sudo user
+RUN chown user /home/user
 RUN echo 'user:1234' | chpasswd user
 
 # Add Daniel's zsh from his Github
